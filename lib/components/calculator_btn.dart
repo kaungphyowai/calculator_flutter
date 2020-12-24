@@ -8,10 +8,12 @@ class CalculatorBtn extends StatelessWidget {
     this.fillColor,
     this.textColor = 0xFFFFFFFF,
     this.textSize = 24,
+    this.callback,
   }) : super(key: key);
   final String text;
   final double textSize;
   final int fillColor, textColor;
+  final Function callback;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +30,9 @@ class CalculatorBtn extends StatelessWidget {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: () {
+            callback(text);
+          },
           color: fillColor != null ? Color(fillColor) : null,
           textColor: Color(textColor),
           shape: RoundedRectangleBorder(

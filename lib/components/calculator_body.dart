@@ -2,7 +2,12 @@ import 'package:calculator_flutter/components/calculator_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CalculatorBody extends StatelessWidget {
+class CalculatorBody extends StatefulWidget {
+  @override
+  _CalculatorBodyState createState() => _CalculatorBodyState();
+}
+
+class _CalculatorBodyState extends State<CalculatorBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
