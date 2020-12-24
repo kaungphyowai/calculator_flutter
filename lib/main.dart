@@ -40,7 +40,6 @@ class _CalculatorAppState extends State<CalculatorApp> {
   void evaluate(String text) {
     Parser p = Parser();
     Expression exp = p.parse(_expression);
-    print(exp.toString());
     ContextModel cm = ContextModel();
 
     setState(() {
